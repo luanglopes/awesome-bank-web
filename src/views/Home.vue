@@ -9,7 +9,7 @@
         <h2 class="text-xl font-bold mb-2">Já tem uma conta?</h2>
 
         <router-link
-          class="px-4 py-2 bg-blue-500 rounded text-white hover:bg-blue-600"
+          class="px-4 py-2 bg-blue-500 rounded text-white hover:bg-opacity-70"
           :to="{ name: 'Login' }"
         >
           Acessar conta
@@ -20,7 +20,7 @@
         <h2 class="text-xl font-bold mb-4">Ainda não tem uma conta?</h2>
 
         <router-link
-          class="px-4 py-2 bg-green-500 rounded text-white hover:bg-green-600"
+          class="px-4 py-2 bg-green-500 rounded text-white hover:bg-opacity-70"
           :to="{ name: 'SignIn' }"
         >
           Criar conta

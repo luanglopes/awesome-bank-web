@@ -1,10 +1,16 @@
 <template>
   <div class="flex w-full">
-    <button class="bg-green-400">Depósito</button>
+    <button @click="emitOperation('deposit')" class="bg-green-500">
+      Depósito
+    </button>
 
-    <button class="bg-yellow-500">Pagamento</button>
+    <button @click="emitOperation('payment')" class="bg-yellow-500">
+      Pagamento
+    </button>
 
-    <button class="bg-blue-600">Saque</button>
+    <button @click="emitOperation('withdraw')" class="bg-blue-600">
+      Saque
+    </button>
   </div>
 </template>
 
@@ -13,6 +19,13 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "AppAccountOperations",
+  setup(_, { emit }) {
+    const emitOperation = (operation: string) => {
+      emit("operationClick", operation);
+    };
+
+    return { emitOperation };
+  },
 });
 </script>
 
